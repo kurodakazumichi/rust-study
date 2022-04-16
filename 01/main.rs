@@ -1,3 +1,4 @@
+#[derive(Debug)]
 enum CHIP{
   Empty,
   Block,
