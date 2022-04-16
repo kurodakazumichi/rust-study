@@ -1,4 +1,3 @@
-```rust
 #[derive(Debug)]
 enum TILE {
   Empty,
@@ -124,4 +123,3 @@ fn main() -> std::io::Result<()>{
 
   Ok(())
 }
-```
