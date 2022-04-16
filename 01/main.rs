@@ -10,7 +10,7 @@ enum TILE {
 
 fn main() -> std::io::Result<()>{
 
-  let stage_data = b"
+  let stage_data = "
 ##########
 #        #
 # P   H G#
@@ -23,14 +23,14 @@ fn main() -> std::io::Result<()>{
 
   let mut stage:Vec<TILE> = Vec::new();
 
-  for ch in stage_data {
+  for ch in stage_data.chars() {
 
-    match *ch {
-      b'#' => { stage.push(TILE::Block); }
-      b' ' => { stage.push(TILE::Empty); }
-      b'P' => { stage.push(TILE::Player); } 
-      b'G' => { stage.push(TILE::Pien); }
-      b'H' => { stage.push(TILE::Heart); }
+    match ch {
+      '#' => { stage.push(TILE::Block); }
+      ' ' => { stage.push(TILE::Empty); }
+      'P' => { stage.push(TILE::Player); } 
+      'G' => { stage.push(TILE::Pien); }
+      'H' => { stage.push(TILE::Heart); }
       _ => {}
     };
   }
